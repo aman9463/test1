@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>As</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <!-- <script src="https://simplewebrtc.com/latest-v2.js"></script> -->
+            <script src="https://webrtc.github.io/adapter/adapter-4.2.2.js"></script>
+
+        <style>
+            #remoteVideos video {
+                height: 150px;
+            }
+            #localVideo {
+                height: 150px;
+            }
+            .videoContainer {
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+.videoContainer video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+        </style>
+  </head>
+
+  <body onload='GUM()'>
+     <!-- <video id="localVideo"></video> -->
+        <!-- <div id="remoteVideos"></div> -->
+    <%= yield %>
+
+    <script type="text/javascript">
+      // var webrtc = new SimpleWebRTC({
+    // the id/element dom element that will hold "our" video
+    // localVideoEl: 'localVideo',
+    // the id/element dom element that will hold remote videos
+    // remoteVideosEl: 'remoteVideos',
+    // immediately ask for camera access
+    // autoRequestMedia: true
+// });
+
+      // we have to wait until it's ready
+// webrtc.on('readyToCall', function () {
+    // you can name it anything
+    // webrtc.joinRoom('your awesome room name');
+// });
+
+
+// var webrtc = new SimpleWebRTC({
+//   localVideoEl: 'localVideo',
+//   remoteVideosEl: '',
+//   autoRequestMedia: true,
+//   url: 'http://localhost:3000/'
+// });
+
+// a peer video has been added
+// webrtc.on('videoAdded', function (video, peer) {
+//     console.log('video added', peer);
+//     var remotes = document.getElementById('remotes');
+//     if (remotes) {
+//         var container = document.createElement('div');
+//         container.className = 'videoContainer';
+//         container.id = 'container_' + webrtc.getDomId(peer);
+//         container.appendChild(video);
+
+        // suppress contextmenu
+    //     video.oncontextmenu = function () { return false; };
+
+    //     remotes.appendChild(container);
+    // }
+
+    </script>
+  </body>
+</html>
