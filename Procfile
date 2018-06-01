@@ -1,0 +1,1 @@
+web: NODE_ENV=production node signalmaster-master/server.js
