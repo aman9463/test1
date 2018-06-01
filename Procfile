@@ -1,1 +1,1 @@
-web: NODE_ENV=production node signalmaster-master/server.js
+web: NODE_ENV=production node node/signalmaster-master/server.js
